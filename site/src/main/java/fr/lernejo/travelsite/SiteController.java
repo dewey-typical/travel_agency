@@ -9,7 +9,7 @@ import java.util.List;
 @RequestMapping(value = "/api")
 public class SiteController {
 
-    public List<User> myUsers = new ArrayList<User>();
+    private final List<User> myUsers = new ArrayList<User>();
 
     @PostMapping(value = "/inscription")
     public void addUser(@RequestBody User user) {

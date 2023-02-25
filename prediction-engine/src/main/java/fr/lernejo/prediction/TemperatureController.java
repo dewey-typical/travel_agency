@@ -9,9 +9,9 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 @RestController
-@RequestMapping(value = "temperature")
+@RequestMapping(value = "api/temperature")
 public class TemperatureController {
-    TemperatureService temperatureService;
+    private final TemperatureService temperatureService;
     private final long MILLIS_IN_A_DAY = 1000 * 60 * 60 * 24;
     private final SimpleDateFormat DateFormat = new SimpleDateFormat("yyyy-MM-dd");
     public TemperatureController(TemperatureService temperatureService) {

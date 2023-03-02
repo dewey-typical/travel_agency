@@ -19,7 +19,7 @@ public class TemperatureController {
     }
 
     @GetMapping
-    public PredictionRest GetTemperature(@RequestParam String country) {
+    public PredictionRest getTemperature(@RequestParam String country) {
         Date today = new Date();
         Date yesterday = new Date(today.getTime() - MILLIS_IN_A_DAY);
         Date twoDayBefore = new Date(today.getTime() - MILLIS_IN_A_DAY*2);
